@@ -7,6 +7,10 @@ public class Main {
         System.out.println("Suhhhhhhh dude!");
         System.out.println("Need some math help huh?");
         System.out.println("Enter 1st number:");
+        // poop
+        /*
+            poop too
+        */
         int num1 = userinput.nextInt();
         System.out.println("Enter operation (+, -, x,or /)");
         String operation= userinput.next();
