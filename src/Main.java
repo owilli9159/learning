@@ -8,11 +8,31 @@ public class Main {
         Integer num1;
         Integer num2;
         String operation;
-//        Integer plusSolution;
-//        Integer minusSolution;
-//        Integer timesSolution;
-//        Integer dividedSolution;
         Integer solution;
+       /* Integer one;
+        Integer two;
+        Integer three;
+        Integer four;
+        Integer five;
+        Integer six;
+        Integer seven;
+        Integer eight;
+        Integer nine;
+        Integer ten;
+
+
+        one = 1;
+        two = 2;
+        three = 3;
+        four = 4;
+        five = 5;
+        six = 6;
+        seven = 7;
+        eight = 8;
+        nine = 9;
+        ten = 10;
+*/
+
 
         // Read inputs
         scanner = new Scanner(System.in);
