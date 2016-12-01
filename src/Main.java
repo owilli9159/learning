@@ -9,30 +9,6 @@ public class Main {
         Integer num2;
         String operation;
         Integer solution;
-       /* Integer one;
-        Integer two;
-        Integer three;
-        Integer four;
-        Integer five;
-        Integer six;
-        Integer seven;
-        Integer eight;
-        Integer nine;
-        Integer ten;
-
-
-        one = 1;
-        two = 2;
-        three = 3;
-        four = 4;
-        five = 5;
-        six = 6;
-        seven = 7;
-        eight = 8;
-        nine = 9;
-        ten = 10;
-*/
-
 
         // Read inputs
         scanner = new Scanner(System.in);
@@ -40,8 +16,52 @@ public class Main {
         System.out.print("Enter 1st number: ");
         num1 = scanner.nextInt();
 
+        if(num1.equals("one")) {
+            num1 = 1;
+        } else if(num1.equals("two")) {
+            num1 = 2;
+        } else if(num1.equals("three")) {
+            num1 = 3;
+        } else if(num1.equals("four")) {
+            num1 = 4;
+        } else if(num1.equals("five")) {
+            num1 = 5;
+        } else if(num1.equals("six")) {
+            num1 = 6;
+        } else if(num1.equals("seven")) {
+            num1 = 7;
+        } else if(num1.equals("eight")) {
+            num1 = 8;
+        } else if(num1.equals("nine")) {
+            num1 = 9;
+        } else if(num1.equals("ten")) {
+            num1 = 10;
+        }
+
         System.out.print("Enter 2nd number: ");
         num2 = scanner.nextInt();
+
+        if (num2.equals("one")) {
+            num2 = 1;
+        } else if (num2.equals("two")) {
+            num2 = 2;
+        } else if(num2.equals("three")) {
+            num2 = 3;
+        } else if(num2.equals("four")) {
+            num2 = 4;
+        } else if(num2.equals("five")) {
+            num2 = 5;
+        } else if(num2.equals("six")) {
+            num2 = 6;
+        } else if(num2.equals("seven")) {
+            num2 = 7;
+        } else if(num2.equals("eight")) {
+            num2 = 8;
+        } else if(num2.equals("nine")) {
+            num2 = 9;
+        } else if(num2.equals("ten")) {
+            num2 = 10;
+        }
 
         System.out.print("Enter operation (+, -, *,or /) ");
         operation = scanner.next();
@@ -62,7 +82,7 @@ public class Main {
             return;
          }
 
-         System.out.println("I got u fam, the answer is " + solution);
+         System.out.println("I got u fam, " + num1 + operation + "is " + solution);
 
     }
 }
