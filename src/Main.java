@@ -5,8 +5,10 @@ public class Main {
     public static void main(String[] args) {
         // Declare objects
         Scanner scanner;
-        Integer num1;
-        Integer num2;
+        String num1;
+        String num2;
+        Integer int1;
+        Integer int2;
         String operation;
         Integer solution;
 
@@ -14,75 +16,76 @@ public class Main {
         scanner = new Scanner(System.in);
 
         System.out.print("Enter 1st number: ");
-        num1 = scanner.nextInt();
+        num1 = scanner.next();
 
-        if(num1.equals("one")) {
-            num1 = 1;
-        } else if(num1.equals("two")) {
-            num1 = 2;
-        } else if(num1.equals("three")) {
-            num1 = 3;
-        } else if(num1.equals("four")) {
-            num1 = 4;
-        } else if(num1.equals("five")) {
-            num1 = 5;
-        } else if(num1.equals("six")) {
-            num1 = 6;
-        } else if(num1.equals("seven")) {
-            num1 = 7;
-        } else if(num1.equals("eight")) {
-            num1 = 8;
-        } else if(num1.equals("nine")) {
-            num1 = 9;
-        } else if(num1.equals("ten")) {
-            num1 = 10;
-        }
-
-        System.out.print("Enter 2nd number: ");
-        num2 = scanner.nextInt();
-
-        if (num2.equals("one")) {
-            num2 = 1;
-        } else if (num2.equals("two")) {
-            num2 = 2;
-        } else if(num2.equals("three")) {
-            num2 = 3;
-        } else if(num2.equals("four")) {
-            num2 = 4;
-        } else if(num2.equals("five")) {
-            num2 = 5;
-        } else if(num2.equals("six")) {
-            num2 = 6;
-        } else if(num2.equals("seven")) {
-            num2 = 7;
-        } else if(num2.equals("eight")) {
-            num2 = 8;
-        } else if(num2.equals("nine")) {
-            num2 = 9;
-        } else if(num2.equals("ten")) {
-            num2 = 10;
+        if(num1.equalsIgnoreCase("one")) {
+            int1 = 1;
+        } else if(num1.equalsIgnoreCase("two")) {
+            int1 = 2;
+        } else if(num1.equalsIgnoreCase("three")) {
+            int1 = 3;
+        } else if(num1.equalsIgnoreCase("four")) {
+            int1 = 4;
+        } else if(num1.equalsIgnoreCase("five")) {
+            int1 = 5;
+        } else if(num1.equalsIgnoreCase("six")) {
+            int1 = 6;
+        } else if(num1.equalsIgnoreCase("seven")) {
+            int1 = 7;
+        } else if(num1.equalsIgnoreCase("eight")) {
+            int1 = 8;
+        } else if(num1.equalsIgnoreCase("nine")) {
+            int1 = 9;
+        } else if(num1.equalsIgnoreCase("ten")) {
+            int1 = 10;
         }
 
         System.out.print("Enter operation (+, -, *,or /) ");
         operation = scanner.next();
 
+        System.out.print("Enter 2nd number: ");
+        num2 = scanner.next();
+
+        if (num2.equals("one")) {
+            int2 = 1;
+        } else if (num2.equalsIgnoreCase("two")) {
+            int2 = 2;
+        } else if(num2.equalsIgnoreCase("three")) {
+            int2 = 3;
+        } else if(num2.equalsIgnoreCase("four")) {
+            int2 = 4;
+        } else if(num2.equalsIgnoreCase("five")) {
+            int2 = 5;
+        } else if(num2.equalsIgnoreCase("six")) {
+            int2 = 6;
+        } else if(num2.equalsIgnoreCase("seven")) {
+            int2 = 7;
+        } else if(num2.equalsIgnoreCase("eight")) {
+            int2 = 8;
+        } else if(num2.equalsIgnoreCase("nine")) {
+            int2 = 9;
+        } else if(num2.equalsIgnoreCase("ten")) {
+            int2 = 10;
+        }
+
+
         System.out.println();
         solution = 999;
 
         if (operation.equals("+")) {
-            solution = num1 + num2;
+            solution = int1 + int2;
         }  else if (operation.equals("-")) {
-            solution = num1 - num2;
+            solution = int1 - int2;
         }  else if (operation.equals("*")) {
-             solution = num1 * num2;
+             solution = int1 * int2;
          } else if (operation.equals("/")) {
-             solution = num1 / num2;
+             solution = int1 / int2;
          } else {
             System.out.println("Error! [" + operation + "] is invalid!");
             return;
          }
 
-         System.out.println("I got u fam, " + num1 + operation + "is " + solution);
+         System.out.println("I got u fam, " + int1 + operation + int2 + "is " + solution);
 
     }
 }
