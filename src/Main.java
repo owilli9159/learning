@@ -7,92 +7,95 @@ public class Main {
         Scanner scanner;
         String num1;
         String num2;
-        Integer int1;
-        Integer int2;
+        int int1 = -1;
+        int int2 = -1;
         String operation;
         Integer solution;
 
-        // Read inputs
         scanner = new Scanner(System.in);
 
-        System.out.print("Enter 1st number: ");
-        num1 = scanner.next();
+        while (int1 < 0) {
+            // Reading input and assigning it to a variable
+            num1 = readInput(scanner, "Enter 1st number: ");
 
-        if(num1.equalsIgnoreCase("one")) {
-            int1 = 1;
-        } else if(num1.equalsIgnoreCase("two")) {
-            int1 = 2;
-        } else if(num1.equalsIgnoreCase("three")) {
-            int1 = 3;
-        } else if(num1.equalsIgnoreCase("four")) {
-            int1 = 4;
-        } else if(num1.equalsIgnoreCase("five")) {
-            int1 = 5;
-        } else if(num1.equalsIgnoreCase("six")) {
-            int1 = 6;
-        } else if(num1.equalsIgnoreCase("seven")) {
-            int1 = 7;
-        } else if(num1.equalsIgnoreCase("eight")) {
-            int1 = 8;
-        } else if(num1.equalsIgnoreCase("nine")) {
-            int1 = 9;
-        } else if(num1.equalsIgnoreCase("ten")) {
-            int1 = 10;
-        } else {
-            System.out.println("Sorry, only integers up to 10 please! I don't understand [" + num1 + "]!");
-            return;
+            // Translating string into an integer
+            int1 = translateInput(num1);
         }
 
-        System.out.print("Enter operation (+, -, *, or /); ");
-        operation = scanner.next();
+        // Reading operation input
+        operation = readInput(scanner,"Enter operation (+, -, *, or /); ");
         if (!operation.equals("+") && !operation.equals("-") && !operation.equals("*") && !operation.equals("/")) {
             System.out.print("Sorry, operation not valid! Use +, -, *, or /");
             return;
         }
 
-        System.out.print("Enter 2nd number: ");
-        num2 = scanner.next();
+        // Reading 2nd string input
+        num2 = readInput(scanner, "Enter 2nd number: ");
 
-        if (num2.equals("one")) {
-            int2 = 1;
-        } else if (num2.equalsIgnoreCase("two")) {
-            int2 = 2;
-        } else if(num2.equalsIgnoreCase("three")) {
-            int2 = 3;
-        } else if(num2.equalsIgnoreCase("four")) {
-            int2 = 4;
-        } else if(num2.equalsIgnoreCase("five")) {
-            int2 = 5;
-        } else if(num2.equalsIgnoreCase("six")) {
-            int2 = 6;
-        } else if(num2.equalsIgnoreCase("seven")) {
-            int2 = 7;
-        } else if(num2.equalsIgnoreCase("eight")) {
-            int2 = 8;
-        } else if(num2.equalsIgnoreCase("nine")) {
-            int2 = 9;
-        } else if(num2.equalsIgnoreCase("ten")) {
-            int2 = 10;
-        } else {
-            System.out.println("Sorry, only integers up to 10 please! I don't understand [ num2 ]!");
+        // Translating to an integer
+        int2 = translateInput(num2);
+        if (int2 == -1) {
             return;
         }
 
+        // Calculate solution
         System.out.println();
+        solution = calcSolution(operation, int1, int2);
 
-        if (operation.equals("+")) {
-            solution = int1 + int2;
-        }  else if (operation.equals("-")) {
-            solution = int1 - int2;
-        }  else if (operation.equals("*")) {
-             solution = int1 * int2;
-         } else if (operation.equals("/")) {
-             solution = int1 / int2;
-         } else {
-            System.out.println("Error! [" + operation + "] is invalid!");
-            return;
-         }
-
-         System.out.println("I got u fam, " + int1 + operation + int2 + " is " + solution);
+        // Print solution
+        System.out.println("I got u fam, " + int1 + operation + int2 + " is " + solution);
     }
+
+    private static String readInput(Scanner scanner, String message) {
+        System.out.print(message);
+
+        String input;
+        input = scanner.next();
+        return input;
+    }
+
+    private static Integer translateInput(String input) {
+        if(input.equalsIgnoreCase("one")) {
+            return 1;
+        } else if(input.equalsIgnoreCase("two")) {
+            return 2;
+        } else if(input.equalsIgnoreCase("three")) {
+            return 3;
+        } else if(input.equalsIgnoreCase("four")) {
+            return 4;
+        } else if(input.equalsIgnoreCase("five")) {
+            return 5;
+        } else if(input.equalsIgnoreCase("six")) {
+            return 6;
+        } else if(input.equalsIgnoreCase("seven")) {
+            return 7;
+        } else if(input.equalsIgnoreCase("eight")) {
+            return 8;
+        } else if(input.equalsIgnoreCase("nine")) {
+            return 9;
+        } else if(input.equalsIgnoreCase("ten")) {
+            return 10;
+        } else {
+            System.out.println("Sorry, only integers up to 10 please! I don't understand [" + input + "]! Please retry!");
+            return -1;
+        }
+    }
+
+    private static Integer calcSolution(String operation, Integer int1, Integer int2) {
+        if (operation.equals("+")) {
+            return int1 + int2;
+        }  else if (operation.equals("-")) {
+            return int1 - int2;
+        }  else if (operation.equals("*")) {
+            return int1 * int2;
+        } else if (operation.equals("/")) {
+            return int1 / int2;
+        } else {
+            System.out.println("Error! [" + operation + "] is invalid!");
+            return -1;
+        }
+    }
+
+   // private static String getInput(Scanner scanner, String message);
+
 }
