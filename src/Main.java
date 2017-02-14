@@ -39,12 +39,16 @@ public class Main {
         } else if(num1.equalsIgnoreCase("ten")) {
             int1 = 10;
         } else {
-            System.out.println("Sorry, only integers up to 10 please! I don't understand [  num1  ]!");
+            System.out.println("Sorry, only integers up to 10 please! I don't understand [" + num1 + "]!");
             return;
         }
 
-        System.out.print("Enter operation (+, -, *,or /) ");
+        System.out.print("Enter operation (+, -, *, or /); ");
         operation = scanner.next();
+        if (!operation.equals("+") && !operation.equals("-") && !operation.equals("*") && !operation.equals("/")) {
+            System.out.print("Sorry, operation not valid! Use +, -, *, or /");
+            return;
+        }
 
         System.out.print("Enter 2nd number: ");
         num2 = scanner.next();
@@ -74,9 +78,7 @@ public class Main {
             return;
         }
 
-
         System.out.println();
-        // solution = 999;
 
         if (operation.equals("+")) {
             solution = int1 + int2;
@@ -92,6 +94,5 @@ public class Main {
          }
 
          System.out.println("I got u fam, " + int1 + operation + int2 + " is " + solution);
-
     }
 }
