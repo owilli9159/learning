@@ -96,6 +96,10 @@ public class Main {
         }
     }
 
-   // private static String getInput(Scanner scanner, String message);
-
+   /* private static String validateOperation(String operation) {
+        if (!operation.equals("+") && !operation.equals("-") && !operation.equals("*") && !operation.equals("/")) {
+            System.out.print("Sorry, operation not valid! Use +, -, *, or /");
+            return operation;
+    }
+    */
 }
